@@ -49,7 +49,6 @@ public class MyTestCases {
 	@Test(priority = 2, enabled = false)
 	public void clickOnAllDigit() throws MalformedURLException {
 		driver = new AndroidDriver(new URL(appiumURL), caps);
-		// Wait until the element is visible before clicking
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		List<WebElement> allButtons = driver.findElements(By.className("android.widget.ImageButton"));
 		for (int i = 0; i < allButtons.size(); i++) {
@@ -65,7 +64,6 @@ public class MyTestCases {
 	@Test(priority = 3, enabled = true)
 	public void clickOnEvenNumbers() throws MalformedURLException {
 		driver = new AndroidDriver(new URL(appiumURL), caps);
-		// Wait until the element is visible before clicking
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		List<WebElement> allButtons = driver.findElements(By.className("android.widget.ImageButton"));
 		for (int i = 0; i < allButtons.size(); i++) {
