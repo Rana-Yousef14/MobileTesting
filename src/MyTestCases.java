@@ -1,12 +1,14 @@
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -29,9 +31,11 @@ public class MyTestCases {
 		caps.setCapability(MobileCapabilityType.APP, myApplication.getAbsolutePath());
 	}
 
-	@Test(priority = 1,enabled = false)
+	@Test(priority = 1, enabled = false)
 	public void addTwoNumbers() throws MalformedURLException {
 		driver = new AndroidDriver(new URL(appiumURL), caps);
+		// Wait until the element is visible before clicking
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		driver.findElement(By.id("com.google.android.calculator:id/digit_9")).click();
 		driver.findElement(By.id("com.google.android.calculator:id/op_add")).click();
 		driver.findElement(By.id("com.google.android.calculator:id/digit_5")).click();
@@ -42,9 +46,11 @@ public class MyTestCases {
 		Assert.assertEquals(actual, expected);
 	}
 
-	@Test(priority = 2,enabled = false)
+	@Test(priority = 2, enabled = false)
 	public void clickOnAllDigit() throws MalformedURLException {
 		driver = new AndroidDriver(new URL(appiumURL), caps);
+		// Wait until the element is visible before clicking
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		List<WebElement> allButtons = driver.findElements(By.className("android.widget.ImageButton"));
 		for (int i = 0; i < allButtons.size(); i++) {
 			if (allButtons.get(i).getAttribute("resource-id").contains("digit")) {
@@ -56,9 +62,11 @@ public class MyTestCases {
 		Assert.assertEquals(actualResult, expectedResult);
 	}
 
-	@Test(priority = 3,enabled = true)
+	@Test(priority = 3, enabled = true)
 	public void clickOnEvenNumbers() throws MalformedURLException {
 		driver = new AndroidDriver(new URL(appiumURL), caps);
+		// Wait until the element is visible before clicking
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		List<WebElement> allButtons = driver.findElements(By.className("android.widget.ImageButton"));
 		for (int i = 0; i < allButtons.size(); i++) {
 			// easy way
