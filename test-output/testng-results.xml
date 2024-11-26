@@ -2,19 +2,19 @@
 <testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-26T13:20:31 EET" name="Default suite" finished-at="2024-11-26T13:20:44 EET" duration-ms="12178">
+  <suite started-at="2024-11-26T17:48:23 EET" name="Default suite" finished-at="2024-11-26T17:48:41 EET" duration-ms="17810">
     <groups>
     </groups>
-    <test started-at="2024-11-26T13:20:31 EET" name="Default test" finished-at="2024-11-26T13:20:44 EET" duration-ms="12178">
+    <test started-at="2024-11-26T17:48:23 EET" name="Default test" finished-at="2024-11-26T17:48:41 EET" duration-ms="17810">
       <class name="MyTestCases">
-        <test-method is-config="true" signature="mySetUp()[pri:0, instance:MyTestCases@36bc55de]" started-at="2024-11-26T13:20:31 EET" name="mySetUp" finished-at="2024-11-26T13:20:31 EET" duration-ms="12" status="PASS">
+        <test-method is-config="true" signature="mySetUp()[pri:0, instance:MyTestCases@36bc55de]" started-at="2024-11-26T17:48:23 EET" name="mySetUp" finished-at="2024-11-26T17:48:23 EET" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mySetUp -->
-        <test-method signature="clickOnEvenNumbers()[pri:0, instance:MyTestCases@36bc55de]" started-at="2024-11-26T13:20:32 EET" name="clickOnEvenNumbers" finished-at="2024-11-26T13:20:44 EET" duration-ms="12141" status="PASS">
+        <test-method signature="clickOnAllDigit()[pri:2, instance:MyTestCases@36bc55de]" started-at="2024-11-26T17:48:23 EET" name="clickOnAllDigit" finished-at="2024-11-26T17:48:41 EET" duration-ms="17770" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickOnEvenNumbers -->
+        </test-method> <!-- clickOnAllDigit -->
       </class> <!-- MyTestCases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

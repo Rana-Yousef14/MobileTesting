@@ -43,7 +43,7 @@ public class MyTestCases {
 	}
 
 	@Test(priority = 2,enabled = false)
-	public void addTwoRandomNumbers() throws MalformedURLException {
+	public void clickOnAllDigit() throws MalformedURLException {
 		driver = new AndroidDriver(new URL(appiumURL), caps);
 		List<WebElement> allButtons = driver.findElements(By.className("android.widget.ImageButton"));
 		for (int i = 0; i < allButtons.size(); i++) {
