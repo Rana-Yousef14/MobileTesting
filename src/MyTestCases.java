@@ -29,7 +29,7 @@ public class MyTestCases {
 		caps.setCapability(MobileCapabilityType.APP, myApplication.getAbsolutePath());
 	}
 
-	@Test(enabled = false)
+	@Test(priority = 1,enabled = false)
 	public void addTwoNumbers() throws MalformedURLException {
 		driver = new AndroidDriver(new URL(appiumURL), caps);
 		driver.findElement(By.id("com.google.android.calculator:id/digit_9")).click();
@@ -42,7 +42,7 @@ public class MyTestCases {
 		Assert.assertEquals(actual, expected);
 	}
 
-	@Test(enabled = false)
+	@Test(priority = 2,enabled = false)
 	public void addTwoRandomNumbers() throws MalformedURLException {
 		driver = new AndroidDriver(new URL(appiumURL), caps);
 		List<WebElement> allButtons = driver.findElements(By.className("android.widget.ImageButton"));
@@ -56,7 +56,7 @@ public class MyTestCases {
 		Assert.assertEquals(actualResult, expectedResult);
 	}
 
-	@Test
+	@Test(priority = 3,enabled = true)
 	public void clickOnEvenNumbers() throws MalformedURLException {
 		driver = new AndroidDriver(new URL(appiumURL), caps);
 		List<WebElement> allButtons = driver.findElements(By.className("android.widget.ImageButton"));
